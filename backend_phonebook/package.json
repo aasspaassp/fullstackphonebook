@@ -1,0 +1,28 @@
+{
+  "name": "ex3",
+  "version": "1.0.0",
+  "description": "fullstack excersise",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:ui": "rm -rf build && cd ../../../part2/fullstackpt2 && npm run build && cp -r build ../../part3/backend1/noteO",
+    "deploy": "git push heroku main",
+    "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && npm run deploy",    
+    "logs:prod": "heroku logs --tail"
+  },
+  "keywords": [
+    "phonebook"
+  ],
+  "author": "Andrés G.A. aassp",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
